@@ -165,18 +165,7 @@ closeSaved.addEventListener("click", () => {
 
 pullBtn.addEventListener("click", () => {
     process();
-})
-
-window.addEventListener("keypress", (e) => {
-    if (e.key === " ") {
-        pullBtn.animate({
-            backgroundColor: ["var(--pullBtnColor)", "var(--lightBack)"],
-            color: ["var(--lightFore)", "var(--darkFore)"],
-            border: ["none", "2px var(--darkFore) solid"]
-          }, 200);
-        process();
-    }
-})
+}, true)
 
 copy.addEventListener("click", () => {
     navigator.clipboard.writeText(image[0]);
@@ -187,11 +176,11 @@ copy.addEventListener("click", () => {
 })
 
 save.addEventListener("click", () => {
+    putStorage(image);
     save.classList.add("active");
     setTimeout(() => {
         save.classList.remove("active");
     }, 1000)
-    putStorage(image);
 })
 
 window.addEventListener("error", (e) => {
