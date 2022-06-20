@@ -520,7 +520,8 @@ main {
 }
 
 #clearData {
-    margin-top: 15px;
+    display: block;
+    margin: 15px auto;
 }
 
 .settingControlBtn {
