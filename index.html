@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Waifus</title>
+  </head>
+  <body>
+      <div class="loader">
+        <span class="letter">l</span>
+        <span class="letter">o</span>
+        <span class="letter">a</span>
+        <span class="letter">d</span>
+        <span class="letter">i</span>
+        <span class="letter">n</span>
+        <span class="letter">g</span>
+        <p><em>Just a sec...</em></p>
+      </div>
+      <div class="page">
+        <div class="modal" id="warningModal">
+          <div class="modalContent">
+            <button class="modalClose" id="modalWarningClose" type="button">&times;</button>
+            <img src="./resources/warning.png" alt="warning image">
+            <p><strong>This site may contain nsfw content</strong></p>
+          </div>  
+        </div>
+        <header>
+          <h1>
+            Waifus
+            <sup>
+              <img src="./resources/like.png" alt="logo part" width="20">
+            </sup>
+          </h1>
+          <nav>
+            <ul class="navMenu">
+              <li class="navItem">
+                <a href="#" class="navLink">Home</a>
+              </li>
+              <li class="navItem">
+                <button id="openSavedBtn" class="navLink">Saved</button>
+              </li>
+              <li class="navItem">
+                <button id="openSettingsBtn" class="navLink">Settings</button>
+              </li>
+            </ul>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </nav>
+        </header>
+        <main>
+          <div class="container">
+            <div class="imageContainer">
+              <a href="#" id="imageSource">
+                <img id="pullImage" src="#" alt="Picture">
+              </a>
+            </div>
+            <div class="controlContainer">
+              <button id="pullBtn" type="button" title="Press Enter!">Pull</button>
+              <div class="options">
+                <button id="save" type="button">
+                  <img src="./resources/save.png" alt="download">
+                </button>
+                <button id="copy" type="button">
+                  <img src="./resources/copy.png" alt="copy">
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div class="overlay" id="setting">
+          <div class="overlayContent">
+            <button type="button" id="closeSetting" class="modalClose">&times;</button>
+            <h2>Settings</h2>
+            <form id="settingForm">
+              <h3>Theme (experimental)</h3>
+              <p><label for="dark">Dark Mode : </label><input value="dark" id="dark" name="theme" type="radio"></p>
+              <p><label for="light">Light Mode : </label><input checked value="light" id="light" name="theme" type="radio"></p>
+              <hr>
+              <h3>Content Type</h3>
+              <p><label for="nsfw">NSFW content : </label><input value="nsfw" id="nsfw" name="typeContent" type="radio"></p>
+              <p><label for="sfw">SFW content : </label><input checked value="sfw" id="sfw" name="typeContent" type="radio"></p>
+              <hr>
+              <details close>
+                <summary>Advanced Configurations</summary>
+                <h3>Image Fit</h3>
+                <p><label for="contain">Contain Image : </label><input value="contain" id="contain" name="imageFit" type="radio"></p>
+                <p><label for="cover">Cover Image : </label><input checked value="cover" id="cover" name="imageFit" type="radio"></p>
+              </details>
+              <div class="settingControlBox">
+                <button type="submit" id="settingControlBtn">Save</button>
+                <button id="settingControlBtn" type="reset">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="overlay" id="saved">
+          <div class="overlayContent">
+            <button type="button" id="closeSaved" class="modalClose">&times;</button>
+            <h2>Saved Pictures</h2>
+            <div id="gallery">
+              <p class="noSaved">You don't have saved images...</p> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="internetStatus">No Internet !</span>
+      <script src="./index.js"></script>
+  </body>
+</html>
