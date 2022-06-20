@@ -17,7 +17,7 @@ const pullImage = document.getElementById("pullImage");
 const sourceImage = document.getElementById("imageSource");
 const root = document.querySelector(":root");
 const gallery = document.getElementById("gallery");
-let image = ["url", "source", "id"];
+let image = ["url", "source", "file"];
 let setOfSetting = ["light", "sfw", "cover"];
 
 function noInternetConnection() {
@@ -53,7 +53,7 @@ function process() {
     let data = httpGet(typeContent);
     image[0] = data.images[0].url;
     image[1] = data.images[0].source;
-    image[2] = data.images[0].image_id;
+    image[2] = data.images[0].file;
     chargeHTML();
 }
 
