@@ -220,5 +220,12 @@ settingForm.addEventListener("reset", (e) => {
     applySettings();
 })
 
+clearData.addEventListener("click", () => {
+    if (confirm("Are you sure ?")) {
+        localStorage.clear();
+        alert("Data cleared");
+    }
+})
+
 applySettings();
 process();

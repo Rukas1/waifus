@@ -519,7 +519,11 @@ main {
     border: none;
 }
 
-#settingControlBtn {
+#clearData {
+    margin-top: 15px;
+}
+
+.settingControlBtn {
     background-color: var(--mainColor);
     border: none;
     border-radius: 10px;
@@ -528,7 +532,7 @@ main {
     color: var(--lightFore);
 }
 
-#settingControlBtn:active {
+.settingControlBtn:active {
     opacity: 0.5;
 }
 
